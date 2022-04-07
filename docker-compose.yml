@@ -5,7 +5,7 @@ services:
     build: .
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 1
     ports:
       - "8080-8083:8090"
   
