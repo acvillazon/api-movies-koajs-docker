@@ -3,9 +3,6 @@ services:
   web:
     restart: always
     build: .
-    deploy:
-      mode: replicated
-      replicas: 1
     ports:
-      - "8080-8083:8090"
+      - "8081:8090"
   
