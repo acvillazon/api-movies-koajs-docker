@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    restart: always
+    build: .
+    deploy:
+      mode: replicated
+      replicas: 2
+    ports:
+      - "8080-8083:8090"
+  
