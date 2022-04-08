@@ -53,7 +53,7 @@ Los servicios son los siguientes
 - POST /movies
     - body: Objeto Json {movie: star wars, find: jedi, replace: CLM Dev }
         1. requerido
-        
+
 ## Construido con 🛠️
 
 * [Docker](https://www.docker.com/)
@@ -84,7 +84,7 @@ docker build -t CONTAINER_NAME .
 docker run -p PORT_TO_EXPOSE:8090  CONTAINER_NAME
 ```
 
-Una vez ejecutado con exito lo anterior nuestra imagen debe estar creada y iniciada.
+Una vez ejecutado con exito lo anterior, nuestra imagen debe estar creada y iniciada.
 
 Si queremos verificar nuestras imagenes creadas, nos basta con ingresar el siguiente comando mediante linea de comando
 ```
