@@ -59,7 +59,7 @@ NodeJS
 ### Instalación 🔧
 
 Luego de descargar el código fuente. 
-Debemos construir la imagen del proyecto usando Docker.
+Debemos construir la imagen del proyecto usando Docker y luego ejecutarla.
 
 Para lo anterior debemos ejecutar mediante linea de comando los siguientes comandos (desde la raiz del proyecto)
 
@@ -78,11 +78,31 @@ Y con el siguiente comando podremos observar el estado de nuestro/nuestros conte
 ```
 docker ps -a
 ```
-
 El puerto correspondiente en el cual será ejecutada la aplicacion es el siguiente.
 ```
 API : http://localhost:PORT_TO_EXPOSE
 API in Heroku: https://blooming-headland-83797.herokuapp.com/ (Api corriendo sobre el servicio de heroku)
+```
+
+### Ejecución con Docker Swarm (Opcional) 🔧
+
+Si queremos ejecutarlo usando Docker Swarm ejecutamos lo siguiente
+```
+docker swarm init
+docker stack deploy -c docker-compose-swarm.yml api
+```
+
+Si queremos verificar el estado de los servicios/tareas de docker swarm
+podemos ejecutar mediante linea de comando lo siguiente:
+
+```
+docker service ls
+docker service ls
+```
+
+El puerto correspondiente en el cual será ejecutada la aplicacion es el siguiente. (Usando Swarm)
+```
+API : http://localhost:3000
 ```
 
 * **Andrés Villazon** - [acvillazon](https://github.com/acvillazon)

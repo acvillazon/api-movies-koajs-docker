@@ -1,12 +1,11 @@
 version: "3"
 services:
   web:
-    image:
     restart: always
     build: .
     deploy:
       mode: replicated
       replicas: 2
     ports:
-      - "8080:8090"
+      - "8080-8081:8090"
   
