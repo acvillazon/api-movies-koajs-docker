@@ -49,6 +49,11 @@ heroku container:push web -a APP_NAME_HEROKU
 heroku container:release web -a APP_NAME_HEROKU
 
 
+Podemos subir un archivo heroku.yml (ottra manera)
+heroku stack:set container -app NAME_OF_REPOSIT -> set de app como container
+git push heroku master 
+
+
 Comandos importantes
 
 docker login
