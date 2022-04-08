@@ -1,0 +1,49 @@
+Como subir imagenes a Docker Hub
+1. Login a docker 
+
+docker login -u DOCKER_ID
+
+Seguido de esto, nos pedira la paswd.
+
+2. Luego necesitariamos subir la imagen
+
+docker push DOCKER_IMAGE
+
+Este paso puede resultar en error, si esto pasa.
+
+3. Deberemos ponerle un tag o re-tagear la imagen.
+
+docker tag DOCKER_IMAGE:TAG(Por defecto es 'latest') DOCKER_ID/DOCKER_REPOSITORY_NAME:TAG (Este tag es el que sea) 
+
+4. Luego de esto intentamos el paso 2.
+
+docker push DOCKER_ID/DOCKER_REPOSITORY_NAME:TAG
+
+5. Terminamos.
+
+
+Como subir imagenes a Heroku
+
+1. Login a Heroku
+
+heroku login
+
+2. Luego empezaremos a habiliatr el container
+
+heroku container:login
+
+Esto nos creara un serie de credenciales para hacer el deploy
+
+3. Luego crearemos nuestra applicacion
+
+heroku create
+
+4. Si no lo tenemos debemos crear el DockerFile
+
+5. Realizamos el push a heroku de nuestra app.
+
+heroku container:push web -a APP_NAME_HEROKU
+
+6. Una vez subido la aplicacion, solo nos faltaria lanzarla
+
+heroku container:release web -a APP_NAME_HEROKU
