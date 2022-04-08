@@ -97,7 +97,7 @@ podemos ejecutar mediante linea de comando lo siguiente:
 
 ```
 docker service ls
-docker service ls
+docker ps ls
 ```
 
 El puerto correspondiente en el cual será ejecutada la aplicacion es el siguiente. (Usando Swarm)
