@@ -38,6 +38,22 @@ Los servicios son los siguientes
 - Al string del plot obtenido buscar la palabra enviada en el Body (find) y reemplazar todas sus ocurrencias por el campo enviado en el body (replace)
 - Devolver el string con las modificaciones del punto anterior
 
+## Resumen de Endpoints
+- GET /movies/:movie
+    - Parametro: :movie
+        1. requerido.
+        2. alfanumerico.
+    - Header: year
+        1. opcional
+        2. numerio
+- GET /movies
+    - Header: page
+        1. opcional
+        2. numerio
+- POST /movies
+    - body: Objeto Json {movie: star wars, find: jedi, replace: CLM Dev }
+        1. requerido
+        
 ## Construido con 🛠️
 
 * [Docker](https://www.docker.com/)
