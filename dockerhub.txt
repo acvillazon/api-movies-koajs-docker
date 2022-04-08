@@ -38,7 +38,8 @@ Esto nos creara un serie de credenciales para hacer el deploy
 
 heroku create
 
-4. Si no lo tenemos debemos crear el DockerFile
+4. Si no lo tenemos debemos crear el DockerFile y/o el heroku.yml (Con heroku.yml, no es necesario tener l docker iniciado, solamente hacemos un git push heroku y ya esta).
+Si en cambio tenemos el docker iniciado, si podemos continuar con el siguiente comando.
 
 5. Realizamos el push a heroku de nuestra app.
 
