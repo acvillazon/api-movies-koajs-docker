@@ -47,3 +47,36 @@ heroku container:push web -a APP_NAME_HEROKU
 6. Una vez subido la aplicacion, solo nos faltaria lanzarla
 
 heroku container:release web -a APP_NAME_HEROKU
+
+
+Comandos importantes
+
+docker login
+docker ps
+docker service ls 
+docker images
+docker network ls    
+docker inspect api_web   
+
+construir contenedor y ejecutarlo, de manera normal
+
+docker build -t api-moviesv4 .
+docker run -it -p 3000:8090  api-moviesv4
+docker rmi 9a0ea5146b80 -> borrar imagens
+docker rm 97bc520d1d46
+DockerFile
+
+usar Swarm
+docker swarm init  
+docker stack deploy -c docker-compose-swarm.yml api 
+docker stack rm api
+docker stack ls
+Necesita de un docker-compose.yml
+pero con imagen en dockerHub
+
+usar Docker-compose
+docker-compose build .
+docker-compose up movies-microservices_web  
+
+Necesita de un docker-compose.yml
+y un DockerFile
