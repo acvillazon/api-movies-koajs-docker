@@ -3,6 +3,7 @@ services:
   web:
     restart: always
     build: .
+    image: acvillazon/api-movies
     deploy:
       mode: replicated
       replicas: 2
